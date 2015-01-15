@@ -1,0 +1,28 @@
+<html>
+  <body>
+    <h1>Add a Term to <%= @dictionary.name() %> </h1>
+
+    <form action="/terms" method="post">
+      <input id='dictionary_id' name='dictionary_id' type='hidden' value='<%= @dictionary.id() %>'>
+
+      <label for='new_term'>The Word Please:</label>
+      <input id='new_term' name='new_term' type='text'>
+
+      <label for='definition'>Define the word:</label>
+      <input id='definition' name='definition' type='text'>
+
+
+      <button type="submit" class="btn btn-warning">Add Word</button>
+    </form>
+
+    <h3>Here are all the spooky terms in this Dictionary:</h3>
+
+    <ul>
+      <% @dictionary.terms().each() do |term| %>
+        <li><strong>Term:</strong> <%= term.new_term() %> <strong>Definition: </strong><%= term.definition() %></li>
+      <% end %>
+    </ul>
+
+    <<a href="/">Return to fictionaries page</a>
+  </body>
+</html>

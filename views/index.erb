@@ -1,0 +1,24 @@
+<HTML>
+  <body>
+    <h1>Create your own CREEPY Fictionary!</h1>
+
+    <h3> Add a name for your CREEPY Fictionary here:</h3>
+
+    <form action="/dictionary" method="post">
+        <label for="dictionary_name">Fictionary</label>
+        <input id="dictionary_name" name="dictionary_name" type="text">
+          <button name="submit" class="btn btn-warning">Add Fictionary</button>
+    </form>
+
+    <h3>  Here are the Fictionaries: </h3>
+
+    <ul>
+      <% @dictionaries.each() do |dictionary_name| %>
+        <li><a href="/dictionary/<%= dictionary_name.id() %>"><%= dictionary_name.name() %></a></li>
+      <% end %>
+    </ul>
+
+    <p>We're not creating dictionaries, we're creating <em>fictionaries</em>!</p>
+
+  </body>
+</html>

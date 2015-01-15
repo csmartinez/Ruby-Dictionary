@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Definitions</h1>
+
+    <h3>Add a term here:</h3>
+
+    <form action="/definitions" method="post">
+      <label for="new_term">Term:</label>
+      <input id="new_term" name="new_term" type="text">
+
+      <label for="definition">Definition:</label>
+      <input id="definition" name="definition" type="text">
+
+      <button type="submit">Add to dictionary!</button>
+    </form>
+
+
+    <h3>Here are the terms in your dictionary!</h3>
+    <ul>
+      <% @definitions.each() do |definition| %>
+        <li><a href="/definitions/<%= definition.id() %>"><%= definition.new_term() %></a></li>
+      <% end %>
+    </ul>
+  </body>
+</html>
