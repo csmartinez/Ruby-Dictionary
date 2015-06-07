@@ -1,8 +1,14 @@
 body {
-  background-image: url("http://www.downloadjpeg.com/wp-content/uploads/2014/05/jpeg-spider-5.jpg");
-  color: white;
+  background-color: gray;
 }
 /*html {
   background-image: url("http://www.downloadjpeg.com/wp-content/uploads/2014/05/jpeg-spider-5.jpg");
   color: white;
 }*/
+a:hover {
+  color: white;
+}
+
+a {
+  color: white;
+}
