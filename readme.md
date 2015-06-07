@@ -1,8 +1,10 @@
 ##Ruby Dictionary
 Simple app that allows the user to create a dictionary with it's own words and definitions stored inside one. Published January 14 2015 at Epicodus.
 
-
 Ruby version 2.2
+
+![alt tag](https://raw.github.com/csmartinez/Ruby-Dictionary/master/screenshot.png)
+
 
 ##Project Setup
 
